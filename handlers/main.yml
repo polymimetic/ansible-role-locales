@@ -1,0 +1,14 @@
+---
+# handlers file for locales
+
+- name: Update locales
+  command: dpkg-reconfigure --frontend noninteractive locales
+
+
+###
+
+- name: Generate locales
+  command: locale-gen
+
+- name: Update TimeZone data
+  command: dpkg-reconfigure --frontend noninteractive tzdata
